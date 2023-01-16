@@ -1,4 +1,4 @@
-const LogoSearch = () => {
+const LogoSearch = ({isActive}) => {
   return (
     <svg
       aria-label="Tìm kiếm"
@@ -15,14 +15,14 @@ const LogoSearch = () => {
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={isActive?"3":"2"}
       ></path>
       <line
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={isActive?"3":"2"}
         x1="16.511"
         x2="22"
         y1="16.511"
