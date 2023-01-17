@@ -1,0 +1,125 @@
+.wrapper{
+  display: flex;
+  margin: 0 100px;
+  color-scheme: dark;
+
+  .content{
+    margin-right: 32px;
+    max-width: 470px;
+    width: 100%;
+  }
+
+  .hint{
+    width: 320px;
+  }
+
+  .item{
+    border-radius: 10px;
+  border: 1px solid rgb(38,38,38);
+    background-color: black;
+    margin: 30px 0;
+    .header{
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .title{
+        margin: 8px 4px 8px 12px;
+        display: flex;
+        align-items: center;
+        .name{
+          margin-left: 10px;
+          font-size: 14px;
+          font-weight: 700;
+          cursor: pointer;
+          &:hover{
+            color: #8a8a8a;
+          }
+        }
+        .img{
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img{
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+
+      .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 4px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .imageContent{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+
+  .tools{
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 0;
+    padding: 0 12px 6px 12px;
+    .right,.left{
+      display: flex;
+      .menuitem{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .like{
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .comment{
+    border-top: 1px solid rgb(38,38,38);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    input{
+      background-color: black;
+      width: 100%;
+      outline: none;
+      border: none;
+    }
+    .btn{
+      margin-left: 10px;
+      color: #8a8a8a;
+      cursor: context-menu;
+    }
+
+    .active{
+      color: #f8f8f8;
+      cursor: pointer;
+    }
+  }
+}
+
+.svg{
+  &:hover{
+    fill: #8a8a8a;
+    
+  }
+}
