@@ -11,6 +11,7 @@ import LogoHeart from "./Logo/LogoHeart.jsx";
 import LogoCreate from "./Logo/LogoCreate.jsx";
 import LogoMenu from "./Logo/LogoMenu.jsx";
 import { useState } from "react";
+import Search from "./Search/Search";
 
 const Sidebar = () => {
   const [isShow, setIsShow] = useState(false);
@@ -20,7 +21,7 @@ const Sidebar = () => {
 
   const list = [
     { type: "Link", link: "/", name: "Trang chủ", icon: LogoHome },
-    { type: "Toggle", name: "Tìm kiếm", icon: LogoSearch },
+    { type: "Toggle", name: "Tìm kiếm", icon: LogoSearch ,component:Search},
     { type: "Link", link: "/explore", name: "Khám phá", icon: LogoExplore },
     { type: "Link", link: "/reels/video", name: "Reels", icon: LogoReels },
     {
@@ -39,6 +40,8 @@ const Sidebar = () => {
     },
     { type: "Menu", name: "Xem thêm", icon: LogoMenu },
   ];
+
+  let Toggle = list[indexShow].component
 
   return (
     <div className={clsx(style.wrapper)}>
@@ -154,6 +157,9 @@ const Sidebar = () => {
           );
         }
       })}
+
+      {isShow && 
+         <Toggle/>}
     </div>
   );
 };
