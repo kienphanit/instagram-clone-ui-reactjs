@@ -4,8 +4,11 @@ import style from "./Home.module.scss";
 
 const Home = () => {
   const [input, setInput] = useState("");
+  const others = ["Giới thiệu","Trợ giúp","Báo chí", "API","Việc làm","Quyền riêng tư","Điều khoản","Vị trí","Ngôn ngữ"]
+  
   return (
     <div className={clsx(style.wrapper)}>
+      {/* ---------------CONTENT------------------ */}
       <div className={clsx(style.content)}>
         <div className={clsx(style.list)}>
           <div className={clsx(style.item)}>
@@ -148,12 +151,66 @@ const Home = () => {
                 spellCheck="false"
                 placeholder="Thêm bình luận..."
               />
-              <div className={input===""?clsx(style.btn):clsx(style.btn,style.active)}>Đăng</div>
+              <div
+                className={
+                  input === "" ? clsx(style.btn) : clsx(style.btn, style.active)
+                }
+              >
+                Đăng
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className={clsx(style.hint)}>Hint</div>
+
+      {/* ---------------------INFO------------------------ */}
+      <div className={clsx(style.hint)}>
+        <div className={clsx(style.myinfo)}>
+          <div className={clsx(style.left)}>
+            <div className={clsx(style.img)}>
+              <img
+                src="https://i.pinimg.com/564x/ce/28/5a/ce285aec4a6de75175c709d931138cf8.jpg"
+                alt="Avatar"
+              />
+            </div>
+            <div className={clsx(style.info)}>
+              <div className={clsx(style.name)}>kienphanit</div>
+              <div className={clsx(style.realname)}>Kine Phan</div>
+            </div>
+          </div>
+          <div className={clsx(style.right)}>Chuyen</div>
+        </div>
+
+        <div className={clsx(style.header)}>
+          <div className={clsx(style.left)}>Gợi ý cho bạn</div>
+          <div className={clsx(style.right)}>Xem tất cả</div>
+        </div>
+        <div className={clsx(style.listHint)}>
+          <div className={clsx(style.itemHint)}>
+            <div className={clsx(style.left)}>
+              <div className={clsx(style.img)}>
+                <img
+                  src="https://i.pinimg.com/564x/ce/28/5a/ce285aec4a6de75175c709d931138cf8.jpg"
+                  alt="Avatar"
+                />
+              </div>
+              <div className={clsx(style.info)}>
+                <div className={clsx(style.name)}>kienphanit</div>
+                <div className={clsx(style.realname)}>Kine Phan</div>
+              </div>
+            </div>
+            <div className={clsx(style.right)}>Theo doi</div>
+          </div>
+        </div>
+        <div className={clsx(style.other)}>
+          {others.map((item,index)=>{
+            return(
+              <div className={clsx(style.itemOther)} key={index}>{item}</div>
+            )
+          })}
+        </div>
+        <div className={clsx(style.footer)}>© 2023 INSTAGRAM FROM KIENPHANIT</div>
+      </div>
     </div>
   );
 };
