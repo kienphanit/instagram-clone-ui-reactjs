@@ -1,5 +1,5 @@
 import Home from "../pages/Home/Home";
-import PageNotFound from "../pages/PageNotFound/PageNotFound";
+// import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import User from "../pages/User/User";
 import Explore from "../pages/Explore/Explore";
 import Message from "../pages/Message/Message";
@@ -10,8 +10,8 @@ const publicRoute = [
   {path:"/explore",component:Explore},
   {path:"/direct/inbox",component:Message},
   {path:"/reels/video/",component:Reels},
-  {path:"/kienphanit",component:User},
-  {path:"*",component:PageNotFound},
+  {path:"*",component:User},
+  // {path:"*",component:PageNotFound},
 ]
 
 const privateRoute = []
