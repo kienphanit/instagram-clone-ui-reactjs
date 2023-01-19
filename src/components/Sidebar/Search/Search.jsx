@@ -13,13 +13,13 @@ const Search = () => {
         method: 'GET',
         headers: {
           'X-RapidAPI-Key': '455e2c45edmshbf733020c7390ebp1e3526jsn1a1dc365378f',
-          'X-RapidAPI-Host': 'instagram-data1.p.rapidapi.com'
+          'X-RapidAPI-Host': 'instagram47.p.rapidapi.com'
         }
       };
       
-      fetch(`https://instagram-data1.p.rapidapi.com/user/search?keyword=${input}`, options)
+      fetch(`https://instagram47.p.rapidapi.com/search?search=${input}`, options)
         .then(response => response.json())
-        .then(response => setData(response.users))
+        .then(response => setData(response.body.users))
         .catch(err => console.error(err));
     }
   },[input])

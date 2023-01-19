@@ -24,7 +24,7 @@ const User = () => {
       .then((response) => response.json())
       .then((response) => setData(response[0]))
       .catch((err) => console.error(err));
-  }, []);
+  }, [window.location.pathname]);
   return (
     <div className={clsx(style.wrapper)}>
       <div className={clsx(style.header)}>
